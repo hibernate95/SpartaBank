@@ -30,4 +30,16 @@ public class DataManager : MonoBehaviour
     {
         return PlayerPrefs.GetFloat("PlayerBalance", 50000f);
     }
+
+    public void SaveCash(float  cash)
+    {
+        PlayerPrefs.SetFloat("PlayerCash", cash);
+    }
+
+    public float LoadCash() 
+    {
+        return PlayerPrefs.GetFloat("PlayerCash", 100000f);
+    }
+
+    
 }

@@ -22,7 +22,7 @@ public class BalanceDisplay : MonoBehaviour
     {
         if (balanceDisplay != null) 
         {
-            balanceDisplay.text = "¿‹∞Ì: " + newBalance.ToString("F2");
+            balanceDisplay.text = "¿‹±›:     " + newBalance.ToString("F0");
         }
     }
 }

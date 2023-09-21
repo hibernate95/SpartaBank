@@ -8,8 +8,13 @@ public class UIManager : MonoBehaviour
     public GameObject SignUpPanel;
     public GameObject DepositPanel;
     public GameObject WithdrawPanel;
-
+    public GameObject Button;
     // Start is called before the first frame update
+    public void Init()
+    {
+        loginPanel.SetActive(false);
+
+    }
     public void ShowLoginPanel()
     {
         loginPanel.SetActive(true);
@@ -21,15 +26,19 @@ public class UIManager : MonoBehaviour
     {
         
         SignUpPanel.SetActive(true);
+        
     }
 
-    public void ShowDpositPanel()
+    public void ShowDepositPanel()
     {
         DepositPanel.SetActive(true);
+        Button.SetActive(false);
+
     }
 
     public void ShowWithdrawPanel()
     {
         WithdrawPanel.SetActive(true);
+        Button.SetActive(false);
     }
 }

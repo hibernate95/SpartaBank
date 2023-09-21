@@ -7,6 +7,11 @@ public class DataManager : MonoBehaviour
     public static DataManager Instance;
     // Start is called before the first frame update
 
+    public void Init()
+    {
+         
+    }
+
 
     private void Awake()
     {

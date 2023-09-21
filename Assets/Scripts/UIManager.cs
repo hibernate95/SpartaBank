@@ -16,6 +16,27 @@ public class UIManager : MonoBehaviour
         
     }
 
+    private static UIManager instance;
+
+    // UIManager의 인스턴스를 반환하는 프로퍼티
+    public static UIManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<UIManager>();
+
+                if (instance == null)
+                {
+                    GameObject go = new GameObject("UIManager");
+                    instance = go.AddComponent<UIManager>();
+                }
+            }
+            return instance;
+        }
+    }
+
     // Update is called once per frame
     public void ShowSignUpPanel()
     {
@@ -23,7 +44,7 @@ public class UIManager : MonoBehaviour
         SignUpPanel.SetActive(true);
     }
 
-    public void ShowDpositPanel()
+    public void ShowDepositPanel()
     {
         DepositPanel.SetActive(true);
     }

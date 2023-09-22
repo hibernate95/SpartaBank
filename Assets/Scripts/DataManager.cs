@@ -7,6 +7,8 @@ public class DataManager : MonoBehaviour
     public static DataManager Instance;
     // Start is called before the first frame update
 
+    public float initialBalance = 50000f;
+    public float initialCash = 100000f;
 
     private void Awake()
     {
@@ -19,6 +21,8 @@ public class DataManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        PlayerPrefs.SetFloat("PlayerBalance", initialBalance);
+        PlayerPrefs.SetFloat("PlayerCash", initialCash);
     }
 
     public void SaveBalance(float balance)

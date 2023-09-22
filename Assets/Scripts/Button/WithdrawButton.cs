@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class WithdrawButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        // 버튼을 클릭할 때 "ShowDepositPanel" 메서드를 호출하는 이벤트 리스너 추가
+        GetComponent<UnityEngine.UI.Button>().onClick.AddListener(ShowWithdrawPanel);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ShowWithdrawPanel()
     {
-        
+        UIManager.Instance.ShowWithdrawPanel();
+
     }
 }
